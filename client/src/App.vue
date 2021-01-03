@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <v-app>
+      <v-card
+        color="grey lighten-4"
+        flat
+        height="200px"
+        tile>
+          <Toolbar></Toolbar>
+          <v-container>Hello world</v-container>
+      </v-card>
+    </v-app>
   </div>
 </template>
+<script>
+import Toolbar from '@/components/Toolbar.vue';
+
+export default {
+  components: {
+    Toolbar,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {

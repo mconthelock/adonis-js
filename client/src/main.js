@@ -1,3 +1,4 @@
+import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/dist/vuetify.min.css';
 
 import { sync } from 'vuex-router-sync';
@@ -5,7 +6,6 @@ import Vuetify from 'vuetify';
 
 import Vue from 'vue';
 import App from './App.vue';
-import './registerServiceWorker';
 import router from './router';
 import store from './store';
 
@@ -17,5 +17,10 @@ sync(store, router);
 new Vue({
   router,
   store,
+  vuetify: new Vuetify({
+    icons: {
+      iconfont: 'mdiSvg',
+    },
+  }),
   render: (h) => h(App),
 }).$mount('#app');
