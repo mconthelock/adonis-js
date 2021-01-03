@@ -1,6 +1,6 @@
 'use strict'
 
-const Project = use("App/Models/Project");
+const Project = use('App/Models/Project');
 const AuthorizationService  = use('App/Services/AuthorizationService');
 
 class ProjectController {
